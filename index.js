@@ -30,13 +30,22 @@ document.querySelector("#top-menu-bar").addEventListener('click', function (e) {
 });
 
 function showSkills() {
-    var skills = ["HTML", "JS", "CSS"];
-    // var skillsHTML = ''
-    // skills.forEach(function (skill) {
-    //      skillsHTML += `<li>${skill}</li>`;
-    // });
+    var skills = [
+        {
+            name: "HTML",
+            endorcements: 5,
+        },
+        {
+            name: "CSS",
+            endorcements: 10,
+        },
+        {
+            name: "JS",
+            endorcements: 15,
+        },
+    ];
     var html = skills.map(function (skill) {
-         return `<li>${skill}</li>`;
+         return `<li>${skill.name} - <span class="endorcements">${skill.endorcements}<span></li>`;
     });
     var container = document.querySelector("#skills ul");
     container.innerHTML = html.join("");
