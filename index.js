@@ -3,37 +3,22 @@ var activePage = 'home';
 var homePage = document.getElementById(activePage);
 homePage.style.display = 'block';
 
-function hidePage(id) {
+function hide(id) {
     document.getElementById(id).style.display = 'none';
 }
 
-function showPage(id) {
+function show(id) {
     document.getElementById(id).style.display = 'block';
 }
 
 function hideAllPages() {
-    hidePage("home");
-    hidePage("languages");
-    hidePage("projects");
-    hidePage("skills");
+    var pages = ["home", "languages", "projects", "skills"];
+    pages.forEach(function (page) {
+        hide(page);
+    });
 }
 
-function showSkills () {
+function showPage(id) {
     hideAllPages();
-    showPage("skills");
-}
-
-function showProjects () {
-    hideAllPages();
-    showPage("projects");
-}
-
-function showLanguages () {
-    hideAllPages();
-    showPage("languages");
-}
-
-function showHome () {
-    hideAllPages();
-    showPage("home");
+    show(id);
 }
