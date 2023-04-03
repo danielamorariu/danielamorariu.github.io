@@ -12,9 +12,9 @@ function show(id) {
 }
 
 function hideAllPages() {
-    var pages = ["home", "languages", "projects", "skills"];
+    var pages = document.querySelectorAll('#main .page');
     pages.forEach(function (page) {
-        hide(page);
+        hide(page.id);
     });
 }
 
