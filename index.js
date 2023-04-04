@@ -23,7 +23,7 @@ function showPage(id) {
 }
 
 document.querySelector("#top-menu-bar").addEventListener('click', function (e) {
-    if (e.target.matches("a")) {
+    if (e.target.matches("a") || e.target.closest("a")) {
         var id = e.target.dataset.page;
         showPage(id);
     }
