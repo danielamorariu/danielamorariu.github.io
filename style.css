@@ -92,7 +92,6 @@ h2 {
   margin: 0;
   padding: 0;
   position: relative;
-  /* transform: skewX(-20deg); */
 }
 
 #top-menu-bar li:before {
@@ -117,7 +116,6 @@ h2 {
 
 #top-menu-bar a span {
   font-size: 20px;
-  /* transform: rotate(-20deg); */
 }
 
 #top-menu-bar a:hover {
@@ -128,7 +126,44 @@ h2 {
   color: blue;
 }
 
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+}
 
+form input, form textarea {
+  background: transparent;
+  font-size: 24px;
+  line-height: 40px;
+  border: none;
+  border-bottom: 2px solid #772cff;
+  padding-inline: 5px;
+  color: #fff;
+}
+
+form input:focus-visible, form textarea:focus-visible {
+  outline: none;
+}
+
+/* Buttons classes */
+.button {
+  margin: auto;
+  margin-top: 30px;
+  background-color: #772cff;
+  background-image: linear-gradient(-249deg,transparent,#772cff);
+  border-radius: 50px;
+  border: 1px solid #772cff;
+  transition: background-color .9s;
+}
+
+.button:hover {
+  background-color: #85e7ff;
+}
+
+.button--large {
+  padding: 5px 50px;
+}
 /* Media queries */
 @media only screen and (max-width: 768px) {
   #header-wrapper {
