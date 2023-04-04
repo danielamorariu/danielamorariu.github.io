@@ -7,7 +7,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  background-image: url("bg-image.jpeg");
+  background-image: url("Images/bg-image.jpeg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -39,6 +39,8 @@ body {
   border-radius: 2px;
   display: none;
 }
+
+/* Header container */
 #header-wrapper {
   display: flex;
   flex-direction: row;
@@ -51,10 +53,12 @@ body {
 .header__image {
   padding-inline: 25px;
 }
+
 .header__image img {
   border-radius: 50%;
   box-shadow: 0 0 0 0 #772cff;
   margin: 10px;
+  transition: box-shadow .9s;
 }
 
 .header__image img:hover {
@@ -69,9 +73,15 @@ h2 {
   color: #fff;
 }
 
+/* Navigation */
+.navigation {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  background-color: #772cff;
+  padding-left: 15px;
+}
+
 #top-menu-bar {
-  text-align: center;
-  background-color: #334455;
   color: #fff;
   margin: 0;
   padding: 0;
@@ -81,19 +91,37 @@ h2 {
   display: inline-block;
   margin: 0;
   padding: 0;
+  position: relative;
+  /* transform: skewX(-20deg); */
+}
+
+#top-menu-bar li:before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 80%;
+  top: 10%;
+  background-color: #fff;
 }
 
 #top-menu-bar a {
   display: inline-block;
   color: #fff;
   text-decoration: none;
-  padding: 5px 15px;
-  margin: 2px 0;
+  padding: 15px 25px;
+  background-image: linear-gradient(-249deg, transparent, #772cff);
+  box-shadow: 0 0 0 1px transparent;
+  background-color: #772cff;
+  transition: background-color .9s;
+}
+
+#top-menu-bar a span {
+  font-size: 20px;
+  /* transform: rotate(-20deg); */
 }
 
 #top-menu-bar a:hover {
-  background-color: #fff;
-  color: #334455;
+  background-color: #85e7ff;
 }
 
 .endorcements {
@@ -102,7 +130,7 @@ h2 {
 
 
 /* Media queries */
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 768px) {
   #header-wrapper {
     height: 100vh;
     flex-direction: column;
@@ -111,5 +139,35 @@ h2 {
 
   .header__content {
     text-align: center;
+  }
+
+  .navigation {
+    grid-template-columns: 1fr;
+  }
+
+  #top-menu-bar {
+    text-align: center;
+  }
+
+  #top-menu-bar li:first-child:before {
+    content: none;
+  }
+
+  #content {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .navigation > span {
+    display: none;
+  }
+
+  #top-menu-bar a {
+    padding: 5px;
+  }
+
+  #top-menu-bar a span {
+    font-size: 18px;
   }
 }
