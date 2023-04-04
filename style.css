@@ -22,6 +22,7 @@ body {
 #side-menu {
   flex: 1;
   padding: 10px;
+
 }
 
 #main {
@@ -33,7 +34,9 @@ body {
 
 .page {
   flex: 1;
-  background-color: aliceblue;
+  background-color: rgba(0, 0, 0, .5);
+  border: 1px solid #772cff;
+  color: #fff;
   padding: 10px;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
   border-radius: 2px;
@@ -127,6 +130,14 @@ h2 {
 }
 
 /* Form */
+
+#form-section {
+  background-color: rgba(0, 0, 0, .5);
+  color: #fff;
+  border: 1px solid #772cff;
+  padding: 10px;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -149,7 +160,7 @@ form input:focus-visible, form textarea:focus-visible {
 /* Buttons classes */
 .button {
   margin: auto;
-  margin-top: 30px;
+  margin-block: 30px 20px;
   background-color: #772cff;
   background-image: linear-gradient(-249deg,transparent,#772cff);
   border-radius: 50px;
@@ -164,6 +175,7 @@ form input:focus-visible, form textarea:focus-visible {
 .button--large {
   padding: 5px 50px;
 }
+
 /* Media queries */
 @media only screen and (max-width: 768px) {
   #header-wrapper {
