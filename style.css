@@ -124,7 +124,15 @@ h2 {
 }
 
 .endorcements {
-  color: blue;
+  color: white;
+}
+
+li.important {
+  font-weight: bolder;
+}
+
+li.important .endorcements {
+  color: #772cff;
 }
 
 /* Form */
