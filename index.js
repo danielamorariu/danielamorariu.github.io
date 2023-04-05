@@ -43,14 +43,18 @@ function showSkills(skills) {
 //   });
 // });
 
-fetch("skills.json")
-  .then(function (r) {
-    //  r.json().then(function (r2) {
-    //     console.warn("r2", r2);
-    //   });
-    return r.json();
-  })
-  .then(function (skills) {
-    console.warn("skills", skills);
-    showSkills(skills);
-  });
+function loadSkills() {
+  fetch("skills.json")
+    .then(function (r) {
+      //  r.json().then(function (r2) {
+      //     console.warn("r2", r2);
+      //   });
+      return r.json();
+    })
+    .then(function (skills) {
+      console.warn("skills", skills);
+      showSkills(skills);
+    });
+}
+
+loadSkills();
