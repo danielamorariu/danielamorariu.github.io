@@ -22,7 +22,6 @@ body {
 #side-menu {
   flex: 1;
   padding: 10px;
-
 }
 
 #main {
@@ -34,7 +33,7 @@ body {
 
 .page {
   flex: 1;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
   border: 1px solid #772cff;
   color: #fff;
   padding: 10px;
@@ -50,7 +49,6 @@ body {
   align-items: center;
   height: 25vh;
   min-height: 200px;
-
 }
 
 .header__image {
@@ -61,11 +59,11 @@ body {
   border-radius: 50%;
   box-shadow: 0 0 0 0 #772cff;
   margin: 10px;
-  transition: box-shadow .9s;
+  transition: box-shadow 0.9s;
 }
 
 .header__image img:hover {
-  box-shadow: 0 0 1rem .5rem #772cff;
+  box-shadow: 0 0 1rem 0.5rem #772cff;
 }
 
 h1 {
@@ -98,7 +96,7 @@ h2 {
 }
 
 #top-menu-bar li:before {
-  content: '';
+  content: "";
   position: absolute;
   width: 1px;
   height: 80%;
@@ -114,7 +112,7 @@ h2 {
   background-image: linear-gradient(-249deg, transparent, #772cff);
   box-shadow: 0 0 0 1px transparent;
   background-color: #772cff;
-  transition: background-color .9s;
+  transition: background-color 0.9s;
 }
 
 #top-menu-bar a span {
@@ -132,7 +130,7 @@ h2 {
 /* Form */
 
 #form-section {
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   border: 1px solid #772cff;
   padding: 10px;
@@ -143,7 +141,8 @@ form {
   flex-direction: column;
 }
 
-form input, form textarea {
+form input,
+form textarea {
   background: transparent;
   font-size: 24px;
   line-height: 40px;
@@ -153,7 +152,8 @@ form input, form textarea {
   color: #fff;
 }
 
-form input:focus-visible, form textarea:focus-visible {
+form input:focus-visible,
+form textarea:focus-visible {
   outline: none;
 }
 
@@ -162,10 +162,10 @@ form input:focus-visible, form textarea:focus-visible {
   margin: auto;
   margin-block: 30px 20px;
   background-color: #772cff;
-  background-image: linear-gradient(-249deg,transparent,#772cff);
+  background-image: linear-gradient(-249deg, transparent, #772cff);
   border-radius: 50px;
   border: 1px solid #772cff;
-  transition: background-color .9s;
+  transition: background-color 0.9s;
 }
 
 .button:hover {
