@@ -201,7 +201,7 @@ form textarea:focus-visible {
   }
 
   #content {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }
 
