@@ -119,7 +119,8 @@ h2 {
   font-size: 20px;
 }
 
-#top-menu-bar a:hover {
+#top-menu-bar a:hover,
+#top-menu-bar a.active {
   background-color: #85e7ff;
 }
 
