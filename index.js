@@ -30,6 +30,12 @@ document.querySelector("#top-menu-bar").addEventListener("click", function (e) {
 });
 
 function showSkills(skills) {
+  skills.sort(function (a, b) {
+    return b.endorcements - a.endorcements;
+  });
+  //   skills.sort(function (a, b) {
+  //     return a.name.localeCompare(b.name);
+  //   });
   var html = skills.map(function (skill) {
     return `<li>${skill.name} - <span class="endorcements">${skill.endorcements}<span></li>`;
   });
@@ -52,7 +58,7 @@ function loadSkills() {
       return r.json();
     })
     .then(function (skills) {
-      console.warn("skills", skills);
+      //   console.warn("skills", skills);
       showSkills(skills);
     });
 }
