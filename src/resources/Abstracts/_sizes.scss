@@ -1,0 +1,23 @@
+// =========================
+// ===== Global spaces =====
+// =========================
+
+$size-8:     .8rem;
+$size-16:   1.6rem;
+$size-32:   3.2rem;
+$size-40:     4rem;
+$size-48:   4.8rem;
+$size-64:   6.4rem;
+$size-96:   9.6rem;
+$size-128: 12.8rem;
+
+/* Content width */
+$inner-width: 192rem;
+
+/* Space between elements */
+$frame-block-padding:          $size-32;
+$frame-block-padding-desktop:  $size-64;
+
+/* Space to viewport border */
+$side-padding:           $size-32;
+$side-padding-desktop:   $size-48;

@@ -1,0 +1,44 @@
+// ======================
+// ===== TYPOGRAPHY =====
+// ======================
+
+a,
+.link {
+  background-color: transparent;
+  color: $col-link;
+  text-decoration-line: underline;
+  text-decoration-color: $col-link;
+
+  &:hover {
+    text-decoration-color: $col-link;;
+  }
+
+  &:focus-visible {
+    outline: .2rem solid currentColor;
+    outline-offset: .1rem;
+    text-decoration: none;
+  }
+}
+
+// ====================
+// ===== Headings =====
+// ====================
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-block-end: 1em;
+  font-weight: bold;
+  font-family: $font-main, sans-serif;
+}
+
+h1, .h1 {
+  margin-block-end: $size-8;
+  font-size: $font-h1-fluid;
+}
+
+h2, .h2 {
+  font-size: $font-h2-fluid;
+}
+
+h3, .h3 {
+  font-size: $font-h3-fluid;
+}

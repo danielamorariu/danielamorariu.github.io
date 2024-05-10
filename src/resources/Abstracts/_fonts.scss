@@ -1,0 +1,53 @@
+// =========================
+// ===== Include Fonts =====
+// =========================
+
+/* Centra 700 Bold */
+@font-face {
+  font-family: Centra;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../../assets/fonts/CentraNo2-Bold.ttf');
+}
+
+/* Centra 500 Medium */
+@font-face {
+  font-family: Centra;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../../assets/fonts/CentraNo2-Medium.ttf');
+}
+
+/* Centra 400 Regular */
+@font-face {
+  font-family: Centra;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../../assets/fonts/CentraNo2-Book.ttf');
+}
+
+// =================
+// ===== Fonts =====
+// =================
+
+$font-main: 'Centra', sans-serif;
+
+
+// ======================
+// ===== Font sizes =====
+// ======================
+
+$font-main-fluid: clamp(1.6rem, 2.5vw, 2.4rem);
+$font-main-line-height: 1.5;
+
+
+// ====================
+// ===== Headings =====
+// ====================
+
+$font-h1-fluid: clamp(4rem, 2.5vw, 5rem);
+$font-h2-fluid: clamp(3.2rem, 2.5vw, 4rem);
+$font-h3-fluid: clamp(2.4rem, 2.5vw, 3.2rem);

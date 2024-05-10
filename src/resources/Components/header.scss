@@ -1,0 +1,27 @@
+/* Header component */
+.header {
+  width: 100vw;
+  height: 100vh;
+  background-color: darkblue;
+
+  &-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: $size-32;
+  }
+
+  &__image {
+    img {
+
+    }
+  }
+
+  &__presentation {
+    span {
+
+    }
+  }
+}

@@ -1,10 +1,12 @@
 import './resources/main.scss';
+import { Header } from "./components/Header/Header";
 import { NavBar } from "./components/Navbar/NavBar";
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
+    <div className="main">
+        <Header />
+        <NavBar />
     </div>
   );
 }

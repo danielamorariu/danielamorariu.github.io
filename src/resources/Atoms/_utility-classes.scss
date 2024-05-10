@@ -1,0 +1,13 @@
+// ==========================
+// ===== GLOBAL CLASSES =====
+// ==========================
+
+.inner {
+  max-width: $inner-width;
+  margin: auto;
+  padding-inline: $side-padding;
+
+  @include breakpoint-min(md) {
+    padding-inline: $side-padding-desktop;
+  }
+}

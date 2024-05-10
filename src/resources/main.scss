@@ -1,5 +1,16 @@
-/* Import bassic style */
-@import 'default-setup.scss';
+/* Import Abstracts */
+@import 'Abstracts/colors';
+@import 'Abstracts/breakpoints';
+@import 'Abstracts/fonts';
+@import 'Abstracts/sizes';
 
-/* Import Components files */
-@import './Navbar/navbar.scss';
+/* Modules */
+@import 'Modules/base';
+
+/* Import Atoms */
+@import 'Atoms/typography';
+@import 'Atoms/utility-classes';
+
+/* Import Components */
+@import 'Components/navbar';
+@import 'Components/header';
