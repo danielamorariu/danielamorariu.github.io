@@ -13,6 +13,9 @@ export const Header = () => {
                         <span>Enim quam diam dolor nulla habitasse per auctor fusce odio fringilla si rhoncus lectus ante lorem quisque sed sagittis</span>
                     </div>
                 </div>
+                <div className="header__cta">
+                    <span></span>
+                </div>
             </div>
         </header>
     )
