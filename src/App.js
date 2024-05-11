@@ -1,13 +1,21 @@
 import './resources/main.scss';
-import { Header } from "./components/Header/Header";
-import { NavBar } from "./components/Navbar/NavBar";
+import { Header } from "./components/Header";
+import { NavBar } from "./components/NavBar";
+import { Skills } from "./components/Skills";
+import { Projects } from "./components/Projects";
+import { Connection } from "./components/Connection";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
-    <div className="main">
+    <>
         <Header />
+        <Skills />
+        <Projects />
+        <Connection />
+        <Footer />
         <NavBar />
-    </div>
+    </>
   );
 }
 
