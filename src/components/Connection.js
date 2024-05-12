@@ -40,7 +40,7 @@ export const Connection = () => {
     };
 
     return (
-        <div className="connection">
+        <div className="connection" id="connection">
             <div className="connection-wrapper inner">
                 <div className="connection__image">
                     <img src={contactImg} alt="Contact Us" width="300"/>

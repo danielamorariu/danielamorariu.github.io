@@ -11,6 +11,7 @@
 
   &-wrapper {
     height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,6 +37,7 @@
     img {
       @include breakpoint-min(md) {
         margin: auto;
+        width: 75%;
       }
     }
   }
@@ -57,7 +59,7 @@
     justify-content: center;
     background-image: linear-gradient(180deg, transparent, $col-darkblue);
 
-    span {
+    a {
       position: relative;
       display: block;
       width: $size-64;
@@ -74,11 +76,4 @@
       }
     }
   }
-
-  //&__border {
-  //  width: 100%;
-  //  height: $size-48;
-  //  margin-block-end: $size-48 * -1;
-  //  background-image: linear-gradient(180deg, transparent, $col-darkblue);
-  //}
 }

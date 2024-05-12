@@ -28,11 +28,9 @@ export const Header = () => {
                 </div>
                 <div className="header__presentation">
                     <h1>Hi! I'm Daniela</h1>
-                    <span>Enim quam diam dolor nulla habitasse per auctor fusce odio fringilla si rhoncus lectus ante lorem quisque sed sagittis</span>
+                    <p>I love exploring and creating</p>
+                    <p>I'm a lifetime learner</p>
                 </div>
-            </div>
-            <div className="header__cta">
-                <span></span>
             </div>
         </header>
     )
