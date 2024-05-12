@@ -3,7 +3,71 @@
 // ==========================
 
 .connection {
-  width: 100%;
+  display: flex;
+  width: 100vw;
   height: 100vh;
-  background-color: orange;
+  background-color: $col-darkblue;
+  border-bottom: 1px solid white;
+
+  &-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint-min(md) {
+      flex-direction: row;
+    }
+  }
+
+  &__image {
+    display: none;
+
+    img {
+      margin: auto;
+
+      @include breakpoint-min(md) {
+        width: 100%;
+      }
+    }
+
+    @include breakpoint-min(md) {
+      display: flex;
+      flex: 1;
+    }
+  }
+
+  &__contact {
+    @include breakpoint-min(md) {
+      flex: 1;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      textarea, input {
+        padding: $size-16;
+        background: transparent;
+        color: $col-text;
+        border: .1rem solid $col-blue;
+        margin-block-end: $size-8;
+        font-size: $font-h3-fluid;
+
+        @include breakpoint-min(md) {
+          margin-block-end: $size-16;
+        }
+      }
+
+      input {
+        min-height: 4rem;
+      }
+
+      button {
+        height: $size-48;
+        background-color: $col-blue;
+        color: $col-text;
+        font-size: $font-main-fluid;
+      }
+    }
+  }
 }
