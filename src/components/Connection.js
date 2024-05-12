@@ -1,7 +1,7 @@
 export const Connection = () => {
 
     return (
-        <div className="connection" id="connection">
+        <div className="connection">
             <div className="connection-wrapper inner">
                 <h2>Connection</h2>
                 <p>Hendrerit pellentesque tincidunt augue malesuada elit cubilia nisi senectus

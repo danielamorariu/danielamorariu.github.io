@@ -3,11 +3,101 @@
 // ====================
 
 .skills {
+  display: flex;
   width: 100vw;
   height: 100vh;
-  background-color: magenta;
+  background-color: $col-darkblue;
 
   &-wrapper {
+    width: 100%;
+  }
 
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(124px, 1fr));
+    grid-auto-rows: 1fr;
+    grid-gap: $size-8;
+
+    @include breakpoint-min(lg) {
+      grid-gap: $size-16;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    gap: $size-8;
+    align-items: center;
+    border: .1rem solid $col-blue;
+    padding: $size-16;
+    background: transparent;
+    outline: none;
+    transition: 1s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      border: .1rem solid $col-darkblue;
+      background-color: $col-blue;
+      transition: 1s ease-in-out;
+
+      .skills-icon {
+        background-color: $col-darkblue;
+      }
+
+      p {
+        color: $col-darkblue;
+      }
+    }
+  }
+
+  &-icon {
+    display: block;
+    width: $size-48;
+    height: $size-48;
+    background-color: $col-blue;
+
+    @include breakpoint-min(md) {
+      width: $size-64;
+      height: $size-64;
+    }
+
+    @include breakpoint-min(xl) {
+      width: $size-96;
+      height: $size-96;
+    }
+
+    &--jquery {
+      mask: url('../../assets/img/jquery.svg') center no-repeat;
+      mask-size: 100%;
+    }
+    &--javascript {
+      mask: url('../../assets/img/javascript.svg') center no-repeat;
+      mask-size: 100%;
+    }
+    &--typescript {
+      mask: url('../../assets/img/typescript.svg') center no-repeat;
+      mask-size: 100%;
+    }
+    &--css {
+      mask: url('../../assets/img/css3.svg') center no-repeat;
+      mask-size: 90%;
+    }
+    &--html {
+      mask: url('../../assets/img/html5.svg') center no-repeat;
+      mask-size: 80%;
+    }
+    &--react {
+      mask: url('../../assets/img/react.svg') center no-repeat;
+      mask-size: 100%;
+    }
+    &--typo3 {
+      mask: url('../../assets/img/typo3.svg') center no-repeat;
+      mask-size: 80%;
+    }
+    &--sass {
+      mask: url('../../assets/img/sass.svg') center no-repeat;
+      mask-size: 100%;
+    }
   }
 }

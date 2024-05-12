@@ -1,7 +1,7 @@
 export const Footer = () => {
 
     return (
-        <div className="footer" id="footer">
+        <div className="footer">
             <div className="footer-wrapper inner">
                 <h2>Footer</h2>
                 <p>Hendrerit pellentesque tincidunt augue malesuada elit cubilia nisi senectus

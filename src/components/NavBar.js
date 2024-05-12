@@ -2,7 +2,7 @@
 export const NavBar = () => {
 
     return (
-        <div className="navbar" id="navbar">
+        <div className="navbar">
             <h1>Hello I'm a navbar</h1>
             <p>Hendrerit pellentesque tincidunt augue malesuada elit cubilia nisi senectus
                 molestie dapibus fermentum gravida vel phasellus sagittis finibus consequat cursus mi

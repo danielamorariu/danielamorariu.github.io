@@ -1,7 +1,7 @@
 export const Projects = () => {
 
     return (
-        <div className="projects" id="projects">
+        <div className="projects">
             <div className="projects-wrapper inner">
                 <h2>Projects</h2>
                 <p>Hendrerit pellentesque tincidunt augue malesuada elit cubilia nisi senectus
