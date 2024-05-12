@@ -4,6 +4,67 @@
 
 .footer {
   width: 100%;
-  height: 300px;
-  background-color: $col-darkblue;
+  padding-block: $size-48;
+  background-color: $col-footer;
+
+  &-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: $size-16;
+  }
+
+  &__socials {
+    display: flex;
+    gap: $size-16;
+  }
+
+  &__social-item {
+    display: block;
+    position: relative;
+    width: $size-48;
+    height: $size-48;
+    border: .1rem solid $col-blue;
+    border-radius: 50%;
+    background-color: $col-darkblue;
+    transition: background-color 1s;
+
+    &:before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: $col-blue;
+    }
+
+    &--linkedin {
+      &:before {
+        mask: url('../../assets/img/linkedin.svg') center no-repeat;
+        mask-size: 50%;
+      }
+    }
+
+    &--facebook {
+      &:before {
+        mask: url('../../assets/img/facebook.svg') center no-repeat;
+        mask-size: 50%;
+      }
+    }
+
+    &--instagram {
+      &:before {
+        mask: url('../../assets/img/instagram.svg') center no-repeat;
+        mask-size: 50%;
+      }
+    }
+
+    &:hover {
+      background-color: $col-blue;
+
+      &:before {
+        background-color: $col-darkblue;
+      }
+    }
+  }
 }
