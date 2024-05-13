@@ -59,6 +59,13 @@
       }
     }
 
+    &--email {
+      &:before {
+        mask: url('../../assets/img/email.svg') center no-repeat;
+        mask-size: 50%;
+      }
+    }
+
     &:hover {
       background-color: $col-blue;
 
