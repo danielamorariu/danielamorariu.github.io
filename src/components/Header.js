@@ -1,11 +1,12 @@
 import ilustration from "../assets/img/image-profil-1.svg";
 import NET from 'vanta/src/vanta.net';
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import { Navbar } from "./Navbar";
 
 export const Header = () => {
     useEffect(() => {
         NET({
-            el: '#vanta',
+            el: '#header',
             mouseControls: true,
             touchControls: true,
             gyroControls: false,
@@ -19,9 +20,10 @@ export const Header = () => {
             points: 15.00
         })
     }, [])
+
     return (
 
-        <header className="header" id="vanta">
+        <header className="header" id="header">
             <div className="header-wrapper inner">
                 <div className="header__image">
                     <img src={ilustration} width="300" alt="Presentation illustration" title="Presentation illustration" />
@@ -31,6 +33,7 @@ export const Header = () => {
                     <p>I love exploring and creating</p>
                     <p>I'm a lifetime learner</p>
                 </div>
+                <Navbar />
             </div>
         </header>
     )
