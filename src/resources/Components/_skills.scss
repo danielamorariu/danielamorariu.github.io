@@ -11,6 +11,11 @@
 
   &-wrapper {
     width: 100%;
+    padding-inline: $size-64;
+
+    @include breakpoint-min(md) {
+      padding-inline: $size-96;
+    }
   }
 
   &-list {
@@ -36,11 +41,13 @@
     outline: none;
     transition: 1s ease-in-out;
     cursor: pointer;
+    height: auto;
 
     &:hover {
       border: .1rem solid $col-darkblue;
       background-color: $col-blue;
       transition: 1s ease-in-out;
+
 
       .skills-icon {
         background-color: $col-darkblue;
@@ -99,6 +106,36 @@
     &--sass {
       mask: url('../../assets/img/sass.svg') center no-repeat;
       mask-size: 100%;
+    }
+  }
+
+  .splide__arrow {
+    border: .2rem solid $col-text;
+    background: $col-blue;
+    top: -4.8rem;
+    width: $size-32;
+    height: $size-32;
+    opacity: 1;
+
+    &--prev {
+      left: calc(50% - 4.8rem);
+    }
+
+    &--next {
+      right: calc(50% - 4.8rem);
+    }
+
+    path {
+      fill: $col-text;
+    }
+
+    &:hover {
+      border: .2rem solid $col-blue;
+      background: $col-text;
+
+      path {
+        fill: $col-blue;
+      }
     }
   }
 }
