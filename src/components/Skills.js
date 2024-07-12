@@ -1,6 +1,18 @@
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
+import skillsSet from "../data/skills.json";
 export const Skills = () => {
+
+    const openItem = (id, clas) => {
+        // const item = document.querySelector(id)
+        const skillClass = 'skills-icon--' + clas.clas
+        const item = document.querySelector('skillClass')
+        console.log('skillClass', skillClass)
+        console.log('open item', item)
+        // const panel = item.querySelector('.skills__panel')
+        // console.log('open item', panel)
+        // panel.classList.toggle('active')
+    }
 
     return (
         <div className="skills" id="skills">
@@ -11,66 +23,30 @@ export const Skills = () => {
                     perPage : 3,
                     focus   : 'center',
                     pagination: false,
-                    gap: '16px',
+                    breakpoints: {
+                        992: {
+                            perPage: 1,
+                        },
+                        1520: {
+                            perPage: 2,
+                        }
+                    }
                 } }>
-                    <SplideSlide>
-                        <div className="skills-item">
-                            <span className="skills-icon skills-icon--jquery"></span>
-                            <p>Jquery</p>
-                        </div>
-                    </SplideSlide>
-                    <SplideSlide>
-                        <div className="skills-item">
-                            <span className="skills-icon skills-icon--javascript"></span>
-                            <p>JavaScript</p>
-                        </div>
-                    </SplideSlide>
-                    <SplideSlide>
-                        <div className="skills-item">
-                            <span className="skills-icon skills-icon--typescript"></span>
-                            <p>Typescript</p>
-                        </div>
-                    </SplideSlide>
-                    <SplideSlide>
-                        <div className="skills-item">
-                            <span className="skills-icon skills-icon--css"></span>
-                            <p>CSS</p>
-                        </div>
-                    </SplideSlide>
-                    <SplideSlide>
-                        <div className="skills-item">
-                            <span className="skills-icon skills-icon--html"></span>
-                            <p>HTML</p>
-                        </div>
-                    </SplideSlide>
-                    <SplideSlide>
-                        <div className="skills-item">
-                            <span className="skills-icon skills-icon--react"></span>
-                            <p>React</p>
-                        </div>
-                    </SplideSlide>
-                    <SplideSlide>
-                        <div className="skills-item">
-                            <span className="skills-icon skills-icon--typo3"></span>
-                            <p>Typo3</p>
-                        </div>
-                    </SplideSlide>
-                    <SplideSlide>
-                        <div className="skills-item">
-                            <span className="skills-icon skills-icon--typo3"></span>
-                            <p>Typo3</p>
-                        </div>
-                    </SplideSlide>
-                    <SplideSlide>
-                        <div className="skills-item">
-                            <span className="skills-icon skills-icon--sass"></span>
-                            <p>Sass</p>
-                        </div>
-                    </SplideSlide>
+                    {skillsSet.map(({ id, name, clas, intro }) => (
+                        <SplideSlide key={id}>
+                            <div className="skills-item" id={id} onClick={() => {openItem ({id}, {clas}) }}>
+                                <span className={`skills-icon skills-icon--${clas}`}></span>
+                                <p>{name}</p>
+                                <div className="skills__panel">
+                                    <p>{intro}</p>
+                                </div>
+                            </div>
+                        </SplideSlide>
+                    ))}
 
                 </Splide>
-
             </div>
+
         </div>
     )
 }

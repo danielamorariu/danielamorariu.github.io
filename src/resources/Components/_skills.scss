@@ -37,25 +37,17 @@
     align-items: center;
     border: .1rem solid $col-blue;
     padding: $size-16;
+    margin: 2rem;
     background: transparent;
     outline: none;
     transition: 1s ease-in-out;
     cursor: pointer;
     height: auto;
 
-    &:hover {
-      border: .1rem solid $col-darkblue;
-      background-color: $col-blue;
-      transition: 1s ease-in-out;
-
-
-      .skills-icon {
-        background-color: $col-darkblue;
-      }
-
-      p {
-        color: $col-darkblue;
-      }
+    &:hover, &:focus {
+      box-shadow: 0 0 $size-8 0 $col-white inset, 0 0 $size-8 .2rem $col-white;
+      border: .1rem solid $col-white;
+      -webkit-transition: all .5s ease-in-out;
     }
   }
 
@@ -109,8 +101,31 @@
     }
   }
 
+  &__panel {
+    text-align: center;
+    padding-top: $size-32;
+    display: none;
+    height: 0;
+    -webkit-transition: all 2s ease-in-out;
+
+    &.active {
+      display: block;
+      height: 100%;
+    }
+  }
+  /* Override Splide Skills */
+  .splide {
+    &__slide {
+      &.is-active {
+        .skills-item {
+
+        }
+      }
+    }
+  }
+
   .splide__arrow {
-    border: .2rem solid $col-text;
+    border: .2rem solid $col-white;
     background: $col-blue;
     top: -4.8rem;
     width: $size-32;
@@ -126,12 +141,12 @@
     }
 
     path {
-      fill: $col-text;
+      fill: $col-white;
     }
 
     &:hover {
       border: .2rem solid $col-blue;
-      background: $col-text;
+      background: $col-white;
 
       path {
         fill: $col-blue;
