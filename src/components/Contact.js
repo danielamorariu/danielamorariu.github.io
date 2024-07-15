@@ -40,7 +40,7 @@ export const Contact = () => {
 
                         <input type="tel" placeholder="Phone No." name="phone" />
 
-                        <textarea rows="6" placeholder="Message" name="message"></textarea>
+                        <textarea rows="3" placeholder="Message" name="message"></textarea>
                         <button type="submit" value="Send message">Send message</button>
                     </form>
                 </div>

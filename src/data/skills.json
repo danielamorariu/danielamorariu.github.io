@@ -3,48 +3,56 @@
     "id": 1,
     "name": "Jquery",
     "clas": "jquery",
+    "range": "80",
     "intro": "Hello, my name is jquery and I am a lorem ipsum sumus colores, Ligula fringilla interdum faucibus purus donec vitae urna hac nisi eget mattis ornare aptent suscipit"
   },
   {
     "id": 2,
     "name": "JavaScript",
     "clas": "javascript",
+    "range": "80",
     "intro": "Hello, my name is jquery and I am a lorem ipsum sumus colores, Ligula fringilla interdum faucibus purus donec vitae urna hac nisi eget mattis ornare aptent suscipit"
   },
   {
     "id": 3,
     "name": "Typescript",
     "clas": "typescript",
+    "range": "50",
     "intro": "Hello, my name is jquery and I am a lorem ipsum sumus colores, Ligula fringilla interdum faucibus purus donec vitae urna hac nisi eget mattis ornare aptent suscipit"
   },
   {
     "id": 4,
     "name": "CSS",
     "clas": "css",
+    "range": "100",
     "intro": "Hello, my name is jquery and I am a lorem ipsum sumus colores, Ligula fringilla interdum faucibus purus donec vitae urna hac nisi eget mattis ornare aptent suscipit"
   },
   {
     "id": 5,
     "name": "HTML",
     "clas": "html",
+    "range": "100",
     "intro": "Hello, my name is jquery and I am a lorem ipsum sumus colores, Ligula fringilla interdum faucibus purus donec vitae urna hac nisi eget mattis ornare aptent suscipit"
   },
   {
     "id": 6,
     "name": "React",
     "clas": "react",
+    "range": "50",
     "intro": "Hello, my name is jquery and I am a lorem ipsum sumus colores, Ligula fringilla interdum faucibus purus donec vitae urna hac nisi eget mattis ornare aptent suscipit"
   },
   {
     "id": 7,
     "name": "TYPO3",
     "clas": "typo3",
+    "range": "75",
     "intro": "Hello, my name is jquery and I am a lorem ipsum sumus colores, Ligula fringilla interdum faucibus purus donec vitae urna hac nisi eget mattis ornare aptent suscipit"
   },
   {
     "id": 8,
     "name": "Sass",
     "clas": "sass",
+    "range": "100",
     "intro": "Hello, my name is jquery and I am a lorem ipsum sumus colores, Ligula fringilla interdum faucibus purus donec vitae urna hac nisi eget mattis ornare aptent suscipit"
   }
 ]

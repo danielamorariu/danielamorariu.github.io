@@ -4,6 +4,9 @@
 
 .skills {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -12,9 +15,22 @@
   &-wrapper {
     width: 100%;
     padding-inline: $size-64;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $size-16;
+    margin-block: unset;
+
+    @include breakpoint-min(sm) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
 
     @include breakpoint-min(md) {
       padding-inline: $size-96;
+    }
+
+    @include breakpoint-min(lg) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: $size-32;
     }
   }
 
@@ -31,23 +47,32 @@
   }
 
   &-item {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: $size-8;
     align-items: center;
+    justify-content: center;
     border: .1rem solid $col-blue;
     padding: $size-16;
-    margin: 2rem;
+    margin-inline: auto;
     background: transparent;
     outline: none;
-    transition: 1s ease-in-out;
+    transition: 0.5s ease-in-out;
     cursor: pointer;
-    height: auto;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+
+    @include breakpoint-min(md) {
+      height: 200px;
+      width: 200px;
+    }
 
     &:hover, &:focus {
       box-shadow: 0 0 $size-8 0 $col-white inset, 0 0 $size-8 .2rem $col-white;
       border: .1rem solid $col-white;
-      -webkit-transition: all .5s ease-in-out;
+      transition: 0.5s ease-in-out;
     }
   }
 
@@ -60,11 +85,6 @@
     @include breakpoint-min(md) {
       width: $size-64;
       height: $size-64;
-    }
-
-    @include breakpoint-min(xl) {
-      width: $size-96;
-      height: $size-96;
     }
 
     &--jquery {
@@ -102,54 +122,13 @@
   }
 
   &__panel {
-    text-align: center;
-    padding-top: $size-32;
-    display: none;
-    height: 0;
-    -webkit-transition: all 2s ease-in-out;
-
-    &.active {
-      display: block;
-      height: 100%;
-    }
-  }
-  /* Override Splide Skills */
-  .splide {
-    &__slide {
-      &.is-active {
-        .skills-item {
-
-        }
-      }
-    }
-  }
-
-  .splide__arrow {
-    border: .2rem solid $col-white;
-    background: $col-blue;
-    top: -4.8rem;
-    width: $size-32;
-    height: $size-32;
-    opacity: 1;
-
-    &--prev {
-      left: calc(50% - 4.8rem);
-    }
-
-    &--next {
-      right: calc(50% - 4.8rem);
-    }
-
-    path {
-      fill: $col-white;
-    }
-
-    &:hover {
-      border: .2rem solid $col-blue;
-      background: $col-white;
-
-      path {
-        fill: $col-blue;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    svg {
+      text {
+        display: none;
       }
     }
   }
