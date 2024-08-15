@@ -6,7 +6,7 @@ import { Flat } from '@alptugidin/react-circular-progress-bar'
 export const Skills = () => {
 
     return (
-        <div className="skills" id="skills">
+        <div className="skills">
             <h2>Skills</h2>
             <div className="skills-wrapper inner">
                 {skillsSet.map(({id, name, clas, range}) => (

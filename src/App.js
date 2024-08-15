@@ -10,14 +10,16 @@ import { SocialMedia } from "./components/SocialMedia";
 function App() {
   return (
     <>
-        <Navbar/>
-        <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/skills' element={<SkillsPage />} />
-            <Route path='/projects' element={<ProjectPage />} />
-            <Route path='/contact' element={<ContactPage />} />
-        </Routes>
-        <SocialMedia />
+        <div className="container">
+            <Navbar/>
+            <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/skills' element={<SkillsPage />} />
+                <Route path='/projects' element={<ProjectPage />} />
+                <Route path='/contact' element={<ContactPage />} />
+            </Routes>
+            <SocialMedia />
+        </div>
     </>
   );
 }

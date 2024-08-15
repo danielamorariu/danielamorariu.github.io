@@ -7,18 +7,21 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  height: 100vh;
+  height: 100%;
   position: relative;
-  background-color: $col-darkblue;
+  padding-block-start: $size-128;
 
   &-wrapper {
     width: 100%;
     padding-inline: $size-64;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: $size-16;
     margin-block: unset;
+
+    @include breakpoint-min(xs) {
+      grid-template-columns: 1fr 1fr;
+    }
 
     @include breakpoint-min(sm) {
       grid-template-columns: 1fr 1fr 1fr;

@@ -49,3 +49,10 @@ button:focus:not(:focus-visible) {
 .root {
   flex-grow: 1;
 }
+
+.container {
+  max-width: none !important;
+  min-height: 100vh;
+  padding: 0 !important;
+  background-color: $col-darkblue;
+}
