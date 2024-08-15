@@ -1,18 +1,21 @@
 import './resources/main.scss';
-import { Header } from "./components/Header";
-import { Skills } from "./components/Skills";
-import { Projects } from "./components/Projects";
-import { Contact } from "./components/Contact";
-import { Footer } from "./components/Footer";
+import { Route, Routes } from 'react-router-dom';
+import { Home } from './pages/Home';
+import { SkillsPage } from "./pages/SkillsPage";
+import { ProjectPage } from "./pages/ProjectPage";
+import { ContactPage } from "./pages/ContactPage";
+import {Navbar} from "./components/Navbar";
 
 function App() {
   return (
     <>
-        <Header />
-        <Skills />
-        <Projects />
-        <Contact />
-        <Footer />
+        <Navbar/>
+        <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/skills' element={<SkillsPage />} />
+            <Route path='/projects' element={<ProjectPage />} />
+            <Route path='/contact' element={<ContactPage />} />
+        </Routes>
     </>
   );
 }
