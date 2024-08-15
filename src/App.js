@@ -4,7 +4,8 @@ import { Home } from './pages/Home';
 import { SkillsPage } from "./pages/SkillsPage";
 import { ProjectPage } from "./pages/ProjectPage";
 import { ContactPage } from "./pages/ContactPage";
-import {Navbar} from "./components/Navbar";
+import { Navbar } from "./components/Navbar";
+import { SocialMedia } from "./components/SocialMedia";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path='/projects' element={<ProjectPage />} />
             <Route path='/contact' element={<ContactPage />} />
         </Routes>
+        <SocialMedia />
     </>
   );
 }

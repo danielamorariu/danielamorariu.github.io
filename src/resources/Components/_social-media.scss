@@ -2,52 +2,38 @@
 // ======== Footer ========
 // ========================
 
-.footer {
-  width: 100%;
-  padding-block: $size-48;
-  background-color: $col-footer;
+.social-media {
+  display: flex;
+  flex-direction: column;
 
   &-wrapper {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: $size-16;
+    position: fixed;
+    right: 0;
+    background: yellow;
+    top :30%;
+    z-index: 9;
   }
 
-  &__socials {
-    display: flex;
-    gap: $size-16;
-  }
-
-  &__social-item {
+  &__item {
     display: block;
     position: relative;
     width: $size-48;
     height: $size-48;
     border: .1rem solid $col-blue;
-    border-radius: 50%;
     background-color: $col-darkblue;
-    transition: background-color 1s;
+    transition: background-color 0.6s;
 
     &:before {
       position: absolute;
       content: '';
       width: 100%;
       height: 100%;
-      background-color: $col-blue;
+      background-color: $col-white;
     }
 
     &--linkedin {
       &:before {
         mask: url('../../assets/img/linkedin.svg') center no-repeat;
-        mask-size: 50%;
-      }
-    }
-
-    &--facebook {
-      &:before {
-        mask: url('../../assets/img/facebook.svg') center no-repeat;
         mask-size: 50%;
       }
     }
@@ -68,10 +54,7 @@
 
     &:hover {
       background-color: $col-blue;
-
-      &:before {
-        background-color: $col-darkblue;
-      }
     }
+
   }
 }
