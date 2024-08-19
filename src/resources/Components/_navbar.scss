@@ -89,6 +89,16 @@
     &__link {
       color: $col-blue;
       text-decoration: none;
+      transition: all 0.5s ease-in-out;
+
+      @include breakpoint-min(md) {
+        padding: $size-8 $size-16;
+      }
+
+      &:hover {
+        color: $col-white;
+        font-weight: bold;
+      }
     }
 
     &__button {

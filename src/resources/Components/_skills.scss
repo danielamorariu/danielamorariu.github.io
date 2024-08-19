@@ -122,6 +122,14 @@
       mask: url('../../assets/img/sass.svg') center no-repeat;
       mask-size: 100%;
     }
+    &--bootstrap {
+      mask: url('../../assets/img/bootstrap.svg') center no-repeat;
+      mask-size: 100%;
+    }
+    &--tailwind {
+      mask: url('../../assets/img/tailwind.svg') center no-repeat;
+      mask-size: 100%;
+    }
   }
 
   &__panel {
