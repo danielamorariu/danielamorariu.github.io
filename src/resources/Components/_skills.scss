@@ -7,34 +7,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: 100vh;
   position: relative;
   padding-block-start: $size-128;
 
   &-wrapper {
     width: 100%;
     padding-inline: $size-64;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: $size-16;
-    margin-block: unset;
-
-    @include breakpoint-min(xs) {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    @include breakpoint-min(sm) {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    @include breakpoint-min(md) {
-      padding-inline: $size-96;
-    }
-
-    @include breakpoint-min(lg) {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      gap: $size-32;
-    }
   }
 
   &-list {
@@ -141,6 +120,36 @@
       text {
         display: none;
       }
+    }
+  }
+
+  &__swiper {
+    max-width: 124rem;
+    padding: $size-48 $size-16;
+    margin: 0 auto;
+    height: 470px !important;
+    position: relative;
+
+    @include breakpoint-min(sm) {
+      height: 520px !important;
+    }
+  }
+
+  //Override Swiper slider styles
+  .swiper-slide {
+    width: 240px !important;
+    height: 300px !important;
+    position: relative !important;
+    border: 2px solid $col-blue;
+    background-color: $col-black;
+    opacity: 0.95;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include breakpoint-min(sm) {
+      width: 370px !important;
+      height: 420px !important;
     }
   }
 }
