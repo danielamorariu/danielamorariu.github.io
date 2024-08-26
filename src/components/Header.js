@@ -29,9 +29,11 @@ export const Header = () => {
                     <img src={ilustration} width="300" alt="Presentation illustration" title="Presentation illustration" />
                 </div>
                 <div className="header__presentation">
-                    <h1>Hi! I'm Daniela</h1>
-                    <p>I love exploring and creating</p>
-                    <p>I'm a lifetime learner</p>
+                    <div className="header__presentation-wrapper">
+                        <h1>Hi! I'm Daniela</h1>
+                        <p>I love exploring and creating</p>
+                        <p>I'm a lifetime learner</p>
+                    </div>
                 </div>
                 <Navbar />
             </div>

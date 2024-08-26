@@ -141,8 +141,8 @@
     height: 300px !important;
     position: relative !important;
     border: 2px solid $col-blue;
-    background-color: $col-black;
-    opacity: 0.95;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
     justify-content: center;

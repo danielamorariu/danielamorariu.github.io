@@ -5,15 +5,33 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { EffectCoverflow } from 'swiper/modules';
+import React, { useEffect } from "react";
 
 import skillsSet from "../data/skills.json";
 import 'react-circular-progressbar/dist/styles.css';
 import { Flat } from '@alptugidin/react-circular-progress-bar'
+import NET from "vanta/src/vanta.net";
 
 export const Skills = () => {
+    useEffect(() => {
+        NET({
+            el: '#skills',
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x3f3fff,
+            maxDistance: 18.00,
+            spacing: 16.00,
+            points: 15.00
+        })
+    }, [])
 
     return (
-        <div className="skills">
+        <div className="skills" id="skills">
             <h2>Skills</h2>
             <div className="skills-wrapper inner">
                 <Swiper
@@ -36,8 +54,8 @@ export const Skills = () => {
                 >
 
                     {skillsSet.map(({id, name, clas, range}) => (
-                        <SwiperSlide>
-                            <div className="skills-item" id={id} key={id}>
+                        <SwiperSlide key={id}>
+                            <div className="skills-item" id={id}>
                                 <span className={`skills-icon skills-icon--${clas}`}></span>
                                 <p>{name}</p>
                                 <p>{range}%</p>

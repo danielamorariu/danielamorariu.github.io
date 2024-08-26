@@ -1,7 +1,25 @@
 import contactImg from "../assets/img/image-profil-1.svg";
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
+import NET from "vanta/src/vanta.net";
+
 export const Contact = () => {
+    useEffect(() => {
+        NET({
+            el: '#connection',
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x3f3fff,
+            maxDistance: 18.00,
+            spacing: 16.00,
+            points: 15.00
+        })
+    }, [])
     const form = useRef();
 
     const sendEmail = (e) => {

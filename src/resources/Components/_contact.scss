@@ -51,6 +51,7 @@
         border: .1rem solid $col-blue;
         margin-block-end: $size-8;
         font-size: $font-h3-fluid;
+        backdrop-filter: blur(10px);
 
         @include breakpoint-min(md) {
           margin-block-end: $size-16;
